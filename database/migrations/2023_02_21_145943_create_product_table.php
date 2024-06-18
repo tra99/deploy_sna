@@ -43,7 +43,7 @@ class CreateProductTable extends Migration
             $table->integer('brand_id')->index()->unsigned(); //Forgien
             $table->foreign('brand_id')->references('id')->on('products_brand')->onDelete('cascade');
 
-            $table->string('code',50)->unique()->nullable();
+            $table->string('code',50)->nullable();
             $table->string('name', 150)->default('');
             $table->string('image', 500)->nullable();
             $table->string('cover',500)->nullable();
